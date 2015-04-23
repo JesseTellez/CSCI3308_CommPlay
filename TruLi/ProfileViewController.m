@@ -18,12 +18,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //Bring Lables and images in front of background
+    ///Bring Lables and images in front of background
     [[_usernameTextLabel superview]bringSubviewToFront:_usernameTextLabel];
     [[_profilePicImage superview]bringSubviewToFront:_profilePicImage];
     [[_userLocationTextLabel superview]bringSubviewToFront:_userLocationTextLabel];
     
-    //Initialize labels and pictures user backend information
+    ///Initialize labels and pictures user backend information
     PFUser *user = [PFUser currentUser];
     NSString *location = user[@"homeTown"];
     self.userLocationTextLabel.text = location;
@@ -53,9 +53,9 @@
 {
     [self showPhotosLibrary];
     
-    //Create a PFObject to with Picture information
+    ///Create a PFObject to with Picture information
     PFObject *ProfilePicture = [PFObject objectWithClassName:@"Profile_Picture"];
-    //Save the Data to Parse
+    ///Save the Data to Parse
     NSData *pictureData = UIImagePNGRepresentation(self.profilePicImage.image);
     NSString *fileName = [NSString stringWithFormat:@"%@.png", _usernameTextLabel.text];
     PFFile *imageFile = [PFFile fileWithName:fileName data:pictureData];
@@ -76,11 +76,11 @@
     NSString *mediaInfo = [info objectForKey:UIImagePickerControllerMediaType];
     if ([mediaInfo isEqualToString:(NSString *)kUTTypeImage])
     {
-        //Photo was taken/selected
+        ///Photo was taken/selected
         self.profilePicImage.image = [info objectForKey:UIImagePickerControllerOriginalImage];
         if (self.imagePicker.sourceType == UIImagePickerControllerSourceTypeCamera)
         {
-            //Save the image
+            ///Save the image
             UIImageWriteToSavedPhotosAlbum(self.profilePicImage.image, nil, nil, nil);
         }
     }

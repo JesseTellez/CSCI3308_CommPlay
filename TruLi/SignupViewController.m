@@ -18,10 +18,10 @@
 {
     [super viewDidLoad];
 }
-
+/* The Signup action takes the userinput and stores the information as strings.  If the user doesnt not enter information, this creates an alert.  If information is entered, the information is sent and stored in the database*/
 - (IBAction)Signup:(id)sender
 {
-    //Store the entered information as strings
+    ///Store the entered information as strings
     NSString *username = [self.usernameField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     
     NSString *password = [self.passwordField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
@@ -34,7 +34,7 @@
     
     NSString *homeTown = [self.homeTown.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     
-    //next check if any of the fields have been left blank or not
+    ///next check if any of the fields have been left blank or not
     if ([username length] == 0 || [password length] == 0 || [email length] == 0 || [homeTown length]==0)
     {
         UIAlertView *alertview = [[UIAlertView alloc]initWithTitle:@"Oops!" message:@"Make sure you enter a username, password, home town, and email adress!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
@@ -43,7 +43,7 @@
     }
     else
     {
-        //Create a new user on Parse
+        ///Create a new user on Parse
         PFUser *newUser = [PFUser user];
         newUser.username = username;
         newUser.password = password;

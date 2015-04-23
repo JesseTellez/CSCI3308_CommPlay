@@ -12,7 +12,7 @@
 	<dict>
 		<key>023FF4384C8040E7D7FF9D3EC01304B1946FB326</key>
 		<string>https://github.com/samjhooker/SocialMediaApp.git</string>
-		<key>51AB54314ED511B97A262D5B04354A9B8F32A6EE</key>
+		<key>EDC17EDC17D0AF8615915E22D909CE2DE91C0BBE</key>
 		<string>https://github.com/JesseTellez/TruLi.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
@@ -21,7 +21,7 @@
 	<dict>
 		<key>023FF4384C8040E7D7FF9D3EC01304B1946FB326</key>
 		<string>../../../SocialMediaApp</string>
-		<key>51AB54314ED511B97A262D5B04354A9B8F32A6EE</key>
+		<key>EDC17EDC17D0AF8615915E22D909CE2DE91C0BBE</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -29,7 +29,7 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>51AB54314ED511B97A262D5B04354A9B8F32A6EE</string>
+	<string>EDC17EDC17D0AF8615915E22D909CE2DE91C0BBE</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -44,7 +44,7 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>51AB54314ED511B97A262D5B04354A9B8F32A6EE</string>
+			<string>EDC17EDC17D0AF8615915E22D909CE2DE91C0BBE</string>
 			<key>IDESourceControlWCCName</key>
 			<string>TruLi</string>
 		</dict>

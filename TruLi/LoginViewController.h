@@ -13,7 +13,9 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *usernameField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
-
+/*! The Login action checks the login fields to see if information was entered correctly.  If
+ the current user exists, then retrienve their information from the database and connect to
+ Parse*/
 - (IBAction)login:(id)sender;
 
 @end

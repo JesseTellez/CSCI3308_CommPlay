@@ -19,7 +19,7 @@
     [super viewDidLoad];
     self.friendsRelation = [[PFUser currentUser] objectForKey:@"friendsRelation"];
     
-    //Retrieve the friends array from the backend
+    ///Retrieve the friends array from the backend
     PFQuery *query = [self.friendsRelation query];
     [query orderByAscending:@"username"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error)
@@ -63,7 +63,7 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    //Tableview cells initialize with friend names
+    ///Tableview cells initialize with friend names
     PFUser *user = [self.friends objectAtIndex:indexPath.row];
     cell.textLabel.text = user.username;
     

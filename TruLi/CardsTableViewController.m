@@ -16,15 +16,17 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    //When the table appears, load the Data from Parse
+    ///When the table appears, load the Data from Parse
     [super viewWillAppear:animated];
     self.currentUser = [PFUser currentUser];
     [self performSelector:@selector(loadDataFromParse)];
 }
-
+/* The loadDataFromParse method retrienves the information from the database and 
+ stores the data as objects into an array and a mutablearray to enable features such as delete
+ and add*/
 - (void)loadDataFromParse
 {
-    //Query Cards from backend
+    ///Query Cards from backend
     PFQuery *query = [PFQuery queryWithClassName:@"userCard"];
     [query whereKey:@"CardOwner" equalTo:self.currentUser];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error)
@@ -35,7 +37,7 @@
         }
         else
         {
-            //Set Arrays to hold the objects returned from the backend
+            ///Set Arrays to hold the objects returned from the backend
             self.userCards = objects;
             self.allCards = [NSMutableArray arrayWithArray:objects];
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -62,11 +64,11 @@
     static NSString *cellIdentifier = @"CardsCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
-    //Grab a Card from the array and load it to a tableView cell
+    ///Grab a Card from the array and load it to a tableView cell
     PFObject *card = [self.userCards objectAtIndex:indexPath.row];
     NSString *cardInfo = [card objectForKey:@"text"];
     
-    //Customize cell properties
+    ///Customize cell properties
     cell.textLabel.text = cardInfo;
     cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
     cell.textLabel.numberOfLines = 0;
@@ -77,12 +79,12 @@
     NSString *cardBool = [card valueForKey:@"Truth"];
     if ([cardBool isEqualToString:@"true"])
     {
-        //Highlight Background as Green
+        ///Highlight Background as Green
         [cell setBackgroundColor:[UIColor colorWithRed:14.0/255.0 green:227.0/255.0 blue:193.0/255.0 alpha:.80]];
     }
     else
     {
-        //highlight Background as Red
+        ///highlight Background as Red
         [cell setBackgroundColor:[UIColor colorWithRed:207.0/255.0 green:81.0/255.0 blue:81.0/255.0 alpha:.80]];
     }
     
@@ -100,7 +102,7 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //When Cell is pulled to the left, delete the cell from the application and the backend
+    ///When Cell is pulled to the left, delete the cell from the application and the backend
     if (editingStyle == UITableViewCellEditingStyleDelete)
     {
         [tableView beginUpdates];

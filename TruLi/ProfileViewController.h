@@ -13,7 +13,7 @@
 @interface ProfileViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (strong, nonatomic) UIImagePickerController *imagePicker;
-
+/*!properties of a user */
 @property (weak, nonatomic) IBOutlet UILabel *usernameTextLabel;
 @property (weak, nonatomic) IBOutlet UILabel *userLocationTextLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *profilePicImage;
@@ -21,7 +21,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *numberOfWinsLabel;
 @property (weak, nonatomic) IBOutlet UILabel *userHonorsTextLabel;
 @property (weak, nonatomic) IBOutlet UILabel *backgroundView;
-
+/*!addPicture checks the state of the button.  If the button is tapped, the user can choose a photo from their album as a profile picture */
 - (IBAction)addPictureTapped:(id)sender;
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info;
 

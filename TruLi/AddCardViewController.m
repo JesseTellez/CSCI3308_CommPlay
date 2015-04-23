@@ -18,7 +18,7 @@
     
     [super viewDidLoad];
     
-    //Customize Text Feild
+    ///Customize Text Feild
     CALayer *imageLayer = _createNewCardText.layer;
     [imageLayer setCornerRadius:10];
     [imageLayer setBorderWidth:1];
@@ -26,7 +26,7 @@
     self.instructonalLabel.lineBreakMode = NSLineBreakByWordWrapping;
     self.instructonalLabel.numberOfLines = 0;
     
-    //Add and customize the checkmark button images
+    ///Add and customize the checkmark button images
     self.isTruthCard = [[UIButton alloc]initWithFrame:CGRectMake(140, 400 , 100, 100)];
     [self.isTruthCard setBackgroundImage:[UIImage imageNamed:@"checkmark3.png"] forState:UIControlStateNormal];
     [self.isTruthCard setBackgroundImage:[UIImage imageNamed:@"checkmark1.png"] forState:UIControlStateSelected|UIControlStateHighlighted];
@@ -36,15 +36,15 @@
     [self.view addSubview:_isTruthCard];
 }
 
-
-
+/*The AddCardToArray Method adds creates an instance of PFObject and adds the userinput to the
+ Parse Backend */
 - (IBAction)addCardToArray:(id)sender
 {
     
     PFUser *user = [PFUser currentUser];
     NSString *cardInfo = [self.createNewCardText.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     
-    //Make a new playercard when the button is pressed and add it to Parse
+    ///Make a new playercard when the button is pressed and add it to Parse
     PFObject *newPlayerCard = [PFObject objectWithClassName:@"userCard"];
     [self.userCards addObject:newPlayerCard];
     newPlayerCard[@"text"] = cardInfo;
@@ -52,7 +52,7 @@
     
     if ((self.isTruthCard.state == UIControlStateHighlighted) || (self.isTruthCard.state == UIControlStateSelected))
     {
-        //Card is True, save to backend
+        ///Card is True, save to backend
         newPlayerCard[@"Truth"]= @"true";
         [newPlayerCard saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error)
         {
@@ -69,7 +69,7 @@
     }
     else
     {
-        //Card is False, save to backend
+        ///Card is False, save to backend
         newPlayerCard[@"Truth"] = @"false";
         [newPlayerCard saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error)
          {
@@ -88,17 +88,17 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    //Send the user back to the cardsView tab once a card is created
+    ///Send the user back to the cardsView tab once a card is created
     if ([segue.identifier isEqualToString:@"backToCardsView"])
     {
         CardsTableViewController *lvc =segue.destinationViewController;
         lvc.navigationItem.hidesBackButton = YES;
     }
 }
-
+/* CheckBoxIsSelected: checks and initializes the state of the check box */
 - (void)checkBoxIsSelected:(id)sender
 {
-    //Hold Stateof the checkbox
+    ///Hold Stateof the checkbox
     checkBoxSelected = !checkBoxSelected;
     [self.isTruthCard setSelected:checkBoxSelected];
 }

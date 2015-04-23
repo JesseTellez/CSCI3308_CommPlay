@@ -20,7 +20,9 @@
     [super viewDidLoad];
 }
 
-
+/* The Login action checks the login fields to see if information was entered correctly.  If
+ the current user exists, then retrienve their information from the database and connect to 
+ Parse*/
 - (IBAction)login:(id)sender
 {
         NSString *username = [self.usernameField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
@@ -34,7 +36,7 @@
         }
         else
         {
-            //attempt to login
+            ///attempt to login
             [PFUser logInWithUsernameInBackground:username password:password block:^(PFUser *user, NSError *error)
             {
                 if (error)

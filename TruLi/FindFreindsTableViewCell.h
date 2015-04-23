@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface FindFreindsTableViewCell : UITableViewCell
+
+/*! These properties enable user to see other users picture, bio and user name
+ within a table view cell */
 @property (weak, nonatomic) IBOutlet UIImageView *FindFriendsProfilePic;
 @property (weak, nonatomic) IBOutlet UILabel *findFriendsUsername;
 @property (weak, nonatomic) IBOutlet UILabel *findFriendsUserBio;

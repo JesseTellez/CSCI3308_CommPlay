@@ -20,7 +20,7 @@
     self.currentUser = [PFUser currentUser];
     PFQuery *query = [PFUser query];
     
-    //find all users
+    ///find all users
     [query orderByAscending:@"username"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error)
     {
@@ -30,7 +30,7 @@
         }
         else
         {
-            //add a propertie to hold on to the array of objects
+            ///add a propertie to hold on to the array of objects
             self.allUsers = objects;
             [self.tableView reloadData];
         }
@@ -54,17 +54,17 @@
     static NSString *cellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
-    //load cells with usernames and check if a friendship already exists
+    ///load cells with usernames and check if a friendship already exists
     PFUser *user = [self.allUsers objectAtIndex:indexPath.row];
     cell.textLabel.text = user.username;
     if ([self isFriend:user])
     {
-        //add checkmarkr
+        ///add checkmark
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     }
     else
     {
-        //clear checkmark
+        ///clear checkmark
         cell.accessoryType = UITableViewCellAccessoryNone;
     }
     return cell;
@@ -72,20 +72,20 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //add users
+    ///add users
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     
-    //update the backend to add friends
+    ///update the backend to add friends
     PFUser *user = [self.allUsers objectAtIndex:indexPath.row];
     PFRelation *friendsRelation = [self.currentUser relationForKey:@"friendsRelation"];
     
     if ([self isFriend:user])
     {
-        //1. remove check mark
+        ///1. remove check mark
         cell.accessoryType = UITableViewCellAccessoryNone;
         
-        //2. remove from array with friends
+        ///2. remove from array with friends
         for (PFUser *friend in self.friends)
         {
             if ([friend.objectId isEqualToString:user.objectId])
@@ -94,13 +94,13 @@
                 break;
             }
         }
-        //3. remove from backend
+        ///3. remove from backend
         [friendsRelation removeObject:user];
         
     }
     else
     {
-        //add as friend
+        ///add as friend
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
         [self.friends addObject:user];
         [friendsRelation addObject:user];
