@@ -32,6 +32,7 @@
     [self.isTruthCard setBackgroundImage:[UIImage imageNamed:@"checkmark1.png"] forState:UIControlStateSelected|UIControlStateHighlighted];
     [self.isTruthCard setBackgroundImage:[UIImage imageNamed:@"checkmark1.png"] forState:UIControlStateHighlighted];
     self.isTruthCard.adjustsImageWhenHighlighted = YES;
+    
     [self.isTruthCard addTarget:self action:@selector(TruthButtonPushed:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_isTruthCard];
 }
@@ -40,7 +41,6 @@
  Parse Backend */
 - (IBAction)addCardToArray:(id)sender
 {
-    
     PFUser *user = [PFUser currentUser];
     NSString *cardInfo = [self.createNewCardText.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     
@@ -111,5 +111,12 @@
 - (void)setSelectedTruthYes:(UIButton *)sender
 {
     [sender setHighlighted:YES];
+
+}
+
+- (void)setSelectedTruthNo:(UIButton *)sender
+{
+    [sender setHighlighted:NO];
 }
 @end
+

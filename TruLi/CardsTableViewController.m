@@ -61,6 +61,9 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    //UPDATE THIS SO THE CELLS DONT RESENT WHEN SCROLLED DOWN
+    
     static NSString *cellIdentifier = @"CardsCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     

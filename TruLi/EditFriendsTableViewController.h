@@ -14,6 +14,8 @@
 @property (strong, nonatomic) NSArray *allUsers;
 @property (strong, nonatomic) PFUser *currentUser;
 @property (strong, nonatomic) NSMutableArray *friends;
+
+
 /*! isFriend checks the relation status between users */
 - (BOOL)isFriend:(PFUser *)user;
 

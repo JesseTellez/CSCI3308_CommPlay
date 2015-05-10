@@ -10,7 +10,6 @@
 		1807551B1AC91FD400FB2B3B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1807551A1AC91FD400FB2B3B /* main.m */; };
 		1807551E1AC91FD400FB2B3B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1807551D1AC91FD400FB2B3B /* AppDelegate.m */; };
 		180755211AC91FD400FB2B3B /* LobbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180755201AC91FD400FB2B3B /* LobbyViewController.m */; };
-		180755271AC91FD400FB2B3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180755251AC91FD400FB2B3B /* Main.storyboard */; };
 		180755291AC91FD400FB2B3B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 180755281AC91FD400FB2B3B /* Images.xcassets */; };
 		1807552C1AC91FD400FB2B3B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1807552A1AC91FD400FB2B3B /* LaunchScreen.xib */; };
 		180755381AC91FD400FB2B3B /* TruLiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 180755371AC91FD400FB2B3B /* TruLiTests.m */; };
@@ -45,6 +44,8 @@
 		180756FE1ACA6E9B00FB2B3B /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180756FD1ACA6E9B00FB2B3B /* FriendsViewController.m */; };
 		180757011ACA6FA900FB2B3B /* EditFriendsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180757001ACA6FA900FB2B3B /* EditFriendsTableViewController.m */; };
 		180757041ACB3CAE00FB2B3B /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180757031ACB3CAE00FB2B3B /* ProfileViewController.m */; };
+		1888CE671AFD29540066C59C /* AddBioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1888CE661AFD29540066C59C /* AddBioViewController.m */; };
+		1888CE6A1AFD61430066C59C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1888CE681AFD61430066C59C /* Main.storyboard */; };
 		18CFFBE41AD38C8D00961004 /* headImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 18CFFBE31AD38C8D00961004 /* headImage.png */; };
 		18CFFBE71AD3AAF200961004 /* CardsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CFFBE61AD3AAF200961004 /* CardsTableViewController.m */; };
 		18CFFBEA1AD3B0F800961004 /* AddCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CFFBE91AD3B0F800961004 /* AddCardViewController.m */; };
@@ -78,7 +79,6 @@
 		1807551D1AC91FD400FB2B3B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1807551F1AC91FD400FB2B3B /* LobbyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LobbyViewController.h; sourceTree = "<group>"; };
 		180755201AC91FD400FB2B3B /* LobbyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LobbyViewController.m; sourceTree = "<group>"; };
-		180755261AC91FD400FB2B3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		180755281AC91FD400FB2B3B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1807552B1AC91FD400FB2B3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		180755311AC91FD400FB2B3B /* TruLiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TruLiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +121,9 @@
 		180757001ACA6FA900FB2B3B /* EditFriendsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditFriendsTableViewController.m; sourceTree = "<group>"; };
 		180757021ACB3CAE00FB2B3B /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		180757031ACB3CAE00FB2B3B /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		1888CE651AFD29540066C59C /* AddBioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddBioViewController.h; sourceTree = "<group>"; };
+		1888CE661AFD29540066C59C /* AddBioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddBioViewController.m; sourceTree = "<group>"; };
+		1888CE691AFD61430066C59C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18CFFBE31AD38C8D00961004 /* headImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = headImage.png; path = ../../SocialMediaApp/SocialMediaApp/headImage.png; sourceTree = "<group>"; };
 		18CFFBE51AD3AAF200961004 /* CardsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardsTableViewController.h; sourceTree = "<group>"; };
 		18CFFBE61AD3AAF200961004 /* CardsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardsTableViewController.m; sourceTree = "<group>"; };
@@ -211,6 +214,8 @@
 				18CFFC261AE83AA400961004 /* CreateGameViewController.m */,
 				180757021ACB3CAE00FB2B3B /* ProfileViewController.h */,
 				180757031ACB3CAE00FB2B3B /* ProfileViewController.m */,
+				1888CE651AFD29540066C59C /* AddBioViewController.h */,
+				1888CE661AFD29540066C59C /* AddBioViewController.m */,
 				180756F01AC9EFC500FB2B3B /* SignupViewController.h */,
 				180756F11AC9EFC500FB2B3B /* SignupViewController.m */,
 				180756ED1AC92B6100FB2B3B /* LoginViewController.h */,
@@ -219,7 +224,7 @@
 				180755201AC91FD400FB2B3B /* LobbyViewController.m */,
 				180756F91AC9FA6500FB2B3B /* TabViewController.h */,
 				180756FA1AC9FA6500FB2B3B /* TabViewController.m */,
-				180755251AC91FD400FB2B3B /* Main.storyboard */,
+				1888CE681AFD61430066C59C /* Main.storyboard */,
 				180755281AC91FD400FB2B3B /* Images.xcassets */,
 				1807552A1AC91FD400FB2B3B /* LaunchScreen.xib */,
 				180755181AC91FD400FB2B3B /* Supporting Files */,
@@ -388,13 +393,13 @@
 				180756CF1AC9229600FB2B3B /* woman-man-7.png in Resources */,
 				18CFFBF91AD8EE6400961004 /* checkmark1.png in Resources */,
 				1807561E1AC9229600FB2B3B /* box-outgoing-7.png in Resources */,
-				180755271AC91FD400FB2B3B /* Main.storyboard in Resources */,
 				18CFFC031AD90CBC00961004 /* bggg.png in Resources */,
 				1807552C1AC91FD400FB2B3B /* LaunchScreen.xib in Resources */,
 				18CFFBE41AD38C8D00961004 /* headImage.png in Resources */,
 				180756651AC9229600FB2B3B /* home-7.png in Resources */,
 				180756401AC9229600FB2B3B /* connectivity-bar-7.png in Resources */,
 				18CFFBFB1AD8EE6900961004 /* checkmark3.png in Resources */,
+				1888CE6A1AFD61430066C59C /* Main.storyboard in Resources */,
 				180756A21AC9229600FB2B3B /* plus-simple-7.png in Resources */,
 				180755291AC91FD400FB2B3B /* Images.xcassets in Resources */,
 				180756241AC9229600FB2B3B /* camera-7.png in Resources */,
@@ -431,6 +436,7 @@
 				18CFFBEA1AD3B0F800961004 /* AddCardViewController.m in Sources */,
 				180757041ACB3CAE00FB2B3B /* ProfileViewController.m in Sources */,
 				180755211AC91FD400FB2B3B /* LobbyViewController.m in Sources */,
+				1888CE671AFD29540066C59C /* AddBioViewController.m in Sources */,
 				180756FE1ACA6E9B00FB2B3B /* FriendsViewController.m in Sources */,
 				1807551B1AC91FD400FB2B3B /* main.m in Sources */,
 				180756FB1AC9FA6500FB2B3B /* TabViewController.m in Sources */,
@@ -457,20 +463,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		180755251AC91FD400FB2B3B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				180755261AC91FD400FB2B3B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1807552A1AC91FD400FB2B3B /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				1807552B1AC91FD400FB2B3B /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		1888CE681AFD61430066C59C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1888CE691AFD61430066C59C /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

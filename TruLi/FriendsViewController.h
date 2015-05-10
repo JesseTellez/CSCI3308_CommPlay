@@ -9,12 +9,14 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 #import "EditFriendsTableViewController.h"
-#import <ParseUI/ParseUI.h>
+
 #import "FindFreindsTableViewCell.h"
 
 @interface FriendsViewController : UITableViewController
 /*! A friends relation is setup to establish a many-to-many relationship between users */
 @property (strong, nonatomic) PFRelation *friendsRelation;
 @property (strong, nonatomic) NSArray *friends;
+
+- (void)getDataFromParse;
 
 @end

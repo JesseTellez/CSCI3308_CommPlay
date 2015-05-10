@@ -18,23 +18,12 @@
 {
     [super viewDidLoad];
     self.friendsRelation = [[PFUser currentUser] objectForKey:@"friendsRelation"];
-    
-    ///Retrieve the friends array from the backend
-    PFQuery *query = [self.friendsRelation query];
-    [query orderByAscending:@"username"];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error)
-    {
-        if (error)
-        {
-            NSLog(@"Error %@ %@",error, [error userInfo]);
-        }
-        else
-        {
-            NSLog(@"%@",objects);
-            self.friends = objects;
-            [self.tableView reloadData];
-        }
-    }];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self getDataFromParse];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -67,7 +56,29 @@
     PFUser *user = [self.friends objectAtIndex:indexPath.row];
     cell.textLabel.text = user.username;
     
+    
     return cell;
+}
+
+#pragma mark - Helper Methods
+
+- (void)getDataFromParse
+{
+    PFQuery *query = [self.friendsRelation query];
+    [query orderByAscending:@"username"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error)
+     {
+         if (error)
+         {
+             NSLog(@"Error %@ %@",error, [error userInfo]);
+         }
+         else
+         {
+             NSLog(@"%@",objects);
+             self.friends = objects;
+             [self.tableView reloadData];
+         }
+     }];
 }
 
 @end
