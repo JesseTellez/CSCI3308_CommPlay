@@ -10,6 +10,10 @@
 #import <MobileCoreServices/MobileCoreServices.h>
 
 @interface ProfileViewController ()
+{
+    PFObject *previousUserPhoto;
+    
+}
 
 @end
 
@@ -18,11 +22,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    self.automaticallyAdjustsScrollViewInsets = NO;
     self.currentUser = [PFUser currentUser];
     [self customizeView];
-    
     [self loadDataFromParse];
     
 }
@@ -42,6 +43,7 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     //if a new picture is choosen remove all other pictures associated to the user
+    PFUser *user = [PFUser currentUser];
     NSString *mediaInfo = [info objectForKey:UIImagePickerControllerMediaType];
     if ([mediaInfo isEqualToString:(NSString *)kUTTypeImage])
     {
@@ -60,13 +62,16 @@
              else
              {
                  //delete the other pictures associated with the user
-                 
-                 //[user setObject:imageFile forKey:@"User_Photo"];
-                 PFObject *ProfilePicture = [PFObject objectWithClassName:@"Profile_Picture"];
-                 [ProfilePicture setObject:imageFile forKey:@"imageFile"];
-                 ProfilePicture[@"pictureOwner"] = self.currentUser.objectId;
+//                 if (previousUserPhoto) {
+//                     [previousUserPhoto deleteInBackground];
+//                     NSLog(@"A previous file has been deleted");
+//                 }
+                 [user setObject:imageFile forKey:@"User_Photo"];
+                 //PFObject *ProfilePicture = [PFObject objectWithClassName:@"Profile_Picture"];
+                 //[ProfilePicture setObject:imageFile forKey:@"imageFile"];
+                 //ProfilePicture[@"pictureOwner"] = self.currentUser.objectId;
                  //self.currentUserImages = ProfilePicture;
-                 [ProfilePicture saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                 [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                      if (error) {
                          NSLog(@"Error: %@ %@", error, [error userInfo]);
                      }
@@ -139,28 +144,44 @@
 
 - (void)loadDataFromParse
 {
-    if (self.currentUser)
+//    if (self.currentUser)
+//    {
+//        PFQuery *pictureQuery = [PFUser query];
+//        //PFQuery *PictureQuery = [PFQuery queryWithClassName:@"Profile_Picture"];
+//        //[pictureQuery whereKey:@"objectID" equalTo:self.currentUser.objectId];
+//        //[pictureQuery orderByDescending:@"createdAt"];
+//        
+//        [pictureQuery getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+//            currentPhoto = object;
+//            //swicth this with image file if this doesnt work
+//            PFFile *image = [currentPhoto objectForKey:@"User_Photo"];
+//            //previousUserPhoto = image;
+//            
+//            if (image == nil)
+//            {
+//                self.profilePicImage.image = [UIImage imageNamed:@"headImage.png"];
+//            }
+//            else
+//            {
+//                [image getDataInBackgroundWithBlock:^(NSData *data, NSError *error)
+//                {
+//                    self.profileImage = [UIImage imageWithData:data];
+//                    self.profilePicImage.image = self.profileImage;
+//
+//                }];
+//            }
+//        }];
+//    }
+    //previousUserPhoto = [self.currentUser objectForKey:@"User_Photo"];
+    PFFile *imageFile = [self.currentUser objectForKey:@"User_Photo"];
+    if (imageFile == nil) {
+        self.profilePicImage.image = [UIImage imageNamed:@"headImage.png"];
+    }
+    else
     {
-        PFQuery *PictureQuery = [PFQuery queryWithClassName:@"Profile_Picture"];
-        [PictureQuery whereKey:@"pictureOwner" equalTo:self.currentUser.objectId];
-        [PictureQuery orderByDescending:@"createdAt"];
-        
-        [PictureQuery getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
-            PFObject *currentPhoto = object;
-            PFFile *image = [currentPhoto objectForKey:@"imageFile"];
-            if (image == nil)
-            {
-                self.profilePicImage.image = [UIImage imageNamed:@"headImage.png"];
-            }
-            else
-            {
-                [image getDataInBackgroundWithBlock:^(NSData *data, NSError *error)
-                {
-                    self.profileImage = [UIImage imageWithData:data];
-                    self.profilePicImage.image = self.profileImage;
-
-                }];
-            }
+        [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+            self.profileImage = [UIImage imageWithData:data];
+            self.profilePicImage.image = self.profileImage;
         }];
     }
 }

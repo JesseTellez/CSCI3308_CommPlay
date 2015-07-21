@@ -8,7 +8,9 @@
 
 #import "FriendsViewController.h"
 
-@interface FriendsViewController ()
+@interface FriendsViewController (){
+    NSArray *Users;
+}
 
 @end
 
@@ -49,13 +51,27 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"cell";
+    FindFreindsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    ///Tableview cells initialize with friend names
     PFUser *user = [self.friends objectAtIndex:indexPath.row];
-    cell.textLabel.text = user.username;
     
+    if (!cell)
+    {
+        cell = [[FindFreindsTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    PFFile *image = [user objectForKey:@"User_Photo"];
+    if (image == nil) {
+        cell.FindFriendsProfilePic.image = [UIImage imageNamed:@"headImage.png"];
+    }
+    else {
+        [image getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+            cell.FindFriendsProfilePic.image = [UIImage imageWithData:data];
+        }];
+    }
+    cell.findFriendsUsername.text = user.username;
+    cell.findFriendsUserBio.text = user[@"homeTown"];
     
     return cell;
 }
@@ -79,6 +95,15 @@
              [self.tableView reloadData];
          }
      }];
+}
+
+- (void)getUserData
+{
+    PFQuery *query = [PFUser query];
+    [query orderByAscending:@"username"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        Users = objects;
+    }];
 }
 
 @end

@@ -7,13 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
+#import "ProfilePicture.h"
+#import <ParseUI/ParseUI.h>
 
 @interface FindFreindsTableViewCell : UITableViewCell
 
+
 /*! These properties enable user to see other users picture, bio and user name
  within a table view cell */
-@property (weak, nonatomic) IBOutlet UIImageView *FindFriendsProfilePic;
+@property (strong, nonatomic) IBOutlet PFImageView *FindFriendsProfilePic;
 @property (weak, nonatomic) IBOutlet UILabel *findFriendsUsername;
 @property (weak, nonatomic) IBOutlet UILabel *findFriendsUserBio;
-
+@property (strong, nonatomic) PFObject *objectd;
+- (void)setProfileImage:(ProfilePicture *)Picture;
+-(void)setSelected:(BOOL)selected animated:(BOOL)animated;
+                         
 @end

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 #import "EditFriendsTableViewController.h"
+#import "FindFreindsTableViewCell.h"
 
 #import "FindFreindsTableViewCell.h"
 
@@ -18,5 +19,6 @@
 @property (strong, nonatomic) NSArray *friends;
 
 - (void)getDataFromParse;
+- (void)getUserData;
 
 @end

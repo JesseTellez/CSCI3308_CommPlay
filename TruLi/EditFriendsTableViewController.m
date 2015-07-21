@@ -7,34 +7,27 @@
 //
 
 #import "EditFriendsTableViewController.h"
+#import "FindFreindsTableViewCell.h"
 
 @interface EditFriendsTableViewController ()
 
 @end
 
-@implementation EditFriendsTableViewController
+@implementation EditFriendsTableViewController {
+    BOOL stopFetching;
+    BOOL requestInProgress;
+    ProfilePicture *userImage;
+    NSArray *PicturesArray;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.currentUser = [PFUser currentUser];
-    PFQuery *query = [PFUser query];
     
-    ///find all users
-    [query orderByAscending:@"username"];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error)
-    {
-        if (error)
-        {
-            NSLog(@"Error: %@ %@", error, [error userInfo]);
-        }
-        else
-        {
-            ///add a propertie to hold on to the array of objects
-            self.allUsers = objects;
-            [self.tableView reloadData];
-        }
-    }];
+    //find all users
+    [self getDataFromParse];
+    //[self fetchData];
 }
 
 #pragma mark - Table view data source
@@ -48,19 +41,35 @@
 {
     return self.allUsers.count;
 }
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
-    
-    ///load cells with usernames and check if a friendship already exists
+    static NSString *cellIdentifier = @"cell";
+    FindFreindsTableViewCell *cell = (FindFreindsTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    if (!cell)
+    {
+        cell = [[FindFreindsTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    }
+    cell.contentView.layer.cornerRadius = 40;
     PFUser *user = [self.allUsers objectAtIndex:indexPath.row];
-    cell.textLabel.text = user.username;
+    PFFile *image = [user objectForKey:@"User_Photo"];
+    if (image == nil) {
+        cell.FindFriendsProfilePic.image = [UIImage imageNamed:@"headImage.png"];
+    }
+    else {
+        [image getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+            cell.FindFriendsProfilePic.image = [UIImage imageWithData:data];
+        }];
+    }
+    cell.findFriendsUsername.text = user.username;
+    cell.findFriendsUserBio.text = user[@"homeTown"];
     if ([self isFriend:user])
     {
         ///add checkmark
-        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        if ([self.friends containsObject:user.objectId])
+        {
+            
+            cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        }
     }
     else
     {
@@ -117,6 +126,30 @@
 }
 
 #pragma mark - Helper Methods
+- (void)TableCellConfig
+{
+    
+}
+- (void)getDataFromParse
+{
+    PFQuery *query = [PFUser query];
+    
+    [query orderByAscending:@"username"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error)
+     {
+         if (error)
+         {
+             NSLog(@"Error: %@ %@", error, [error userInfo]);
+         }
+         else
+         {
+             ///add a propertie to hold on to the array of objects
+             self.allUsers = objects;
+             [self.tableView reloadData];
+         }
+     }];
+
+}
 
 - (BOOL)isFriend:(PFUser *)user
 {

@@ -44,8 +44,19 @@
 		180756FE1ACA6E9B00FB2B3B /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180756FD1ACA6E9B00FB2B3B /* FriendsViewController.m */; };
 		180757011ACA6FA900FB2B3B /* EditFriendsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180757001ACA6FA900FB2B3B /* EditFriendsTableViewController.m */; };
 		180757041ACB3CAE00FB2B3B /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180757031ACB3CAE00FB2B3B /* ProfileViewController.m */; };
+		184867731B546F140036CA56 /* GamesLobbyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184867721B546F140036CA56 /* GamesLobbyTableViewController.m */; };
+		184867761B5470BE0036CA56 /* InviteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 184867751B5470BE0036CA56 /* InviteTableViewCell.m */; };
+		184867AE1B5C834E0036CA56 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184867AD1B5C834E0036CA56 /* Social.framework */; };
+		184867B01B5C83870036CA56 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184867AF1B5C83870036CA56 /* Accounts.framework */; };
+		1874A7541B253855008C899E /* Invite.m in Sources */ = {isa = PBXBuildFile; fileRef = 1874A7531B253855008C899E /* Invite.m */; };
+		1874A7F21B4A3451008C899E /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1874A7F11B4A3451008C899E /* GameViewController.m */; };
+		1874A7F51B4F3D4A008C899E /* InvitesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1874A7F41B4F3D4A008C899E /* InvitesTableViewController.m */; };
 		1888CE671AFD29540066C59C /* AddBioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1888CE661AFD29540066C59C /* AddBioViewController.m */; };
 		1888CE6A1AFD61430066C59C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1888CE681AFD61430066C59C /* Main.storyboard */; };
+		1888CE6F1B0C52990066C59C /* UserCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 1888CE6E1B0C52990066C59C /* UserCard.m */; };
+		1888CE721B0C56050066C59C /* ProfilePicture.m in Sources */ = {isa = PBXBuildFile; fileRef = 1888CE711B0C56050066C59C /* ProfilePicture.m */; };
+		1888CE751B0C57930066C59C /* userAboutMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 1888CE741B0C57930066C59C /* userAboutMe.m */; };
+		1888CE781B0C58AA0066C59C /* Games.m in Sources */ = {isa = PBXBuildFile; fileRef = 1888CE771B0C58AA0066C59C /* Games.m */; };
 		18CFFBE41AD38C8D00961004 /* headImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 18CFFBE31AD38C8D00961004 /* headImage.png */; };
 		18CFFBE71AD3AAF200961004 /* CardsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CFFBE61AD3AAF200961004 /* CardsTableViewController.m */; };
 		18CFFBEA1AD3B0F800961004 /* AddCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CFFBE91AD3B0F800961004 /* AddCardViewController.m */; };
@@ -121,9 +132,29 @@
 		180757001ACA6FA900FB2B3B /* EditFriendsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditFriendsTableViewController.m; sourceTree = "<group>"; };
 		180757021ACB3CAE00FB2B3B /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		180757031ACB3CAE00FB2B3B /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		184867711B546F140036CA56 /* GamesLobbyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GamesLobbyTableViewController.h; sourceTree = "<group>"; };
+		184867721B546F140036CA56 /* GamesLobbyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GamesLobbyTableViewController.m; sourceTree = "<group>"; };
+		184867741B5470BE0036CA56 /* InviteTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InviteTableViewCell.h; sourceTree = "<group>"; };
+		184867751B5470BE0036CA56 /* InviteTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InviteTableViewCell.m; sourceTree = "<group>"; };
+		184867AD1B5C834E0036CA56 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		184867AF1B5C83870036CA56 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		1874A7521B253855008C899E /* Invite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Invite.h; path = TruLi/Invite.h; sourceTree = "<group>"; };
+		1874A7531B253855008C899E /* Invite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Invite.m; path = TruLi/Invite.m; sourceTree = "<group>"; };
+		1874A7F01B4A3451008C899E /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		1874A7F11B4A3451008C899E /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		1874A7F31B4F3D4A008C899E /* InvitesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvitesTableViewController.h; sourceTree = "<group>"; };
+		1874A7F41B4F3D4A008C899E /* InvitesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvitesTableViewController.m; sourceTree = "<group>"; };
 		1888CE651AFD29540066C59C /* AddBioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddBioViewController.h; sourceTree = "<group>"; };
 		1888CE661AFD29540066C59C /* AddBioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddBioViewController.m; sourceTree = "<group>"; };
 		1888CE691AFD61430066C59C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1888CE6D1B0C52990066C59C /* UserCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCard.h; sourceTree = "<group>"; };
+		1888CE6E1B0C52990066C59C /* UserCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCard.m; sourceTree = "<group>"; };
+		1888CE701B0C56050066C59C /* ProfilePicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfilePicture.h; sourceTree = "<group>"; };
+		1888CE711B0C56050066C59C /* ProfilePicture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfilePicture.m; sourceTree = "<group>"; };
+		1888CE731B0C57930066C59C /* userAboutMe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = userAboutMe.h; sourceTree = "<group>"; };
+		1888CE741B0C57930066C59C /* userAboutMe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = userAboutMe.m; sourceTree = "<group>"; };
+		1888CE761B0C58AA0066C59C /* Games.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Games.h; sourceTree = "<group>"; };
+		1888CE771B0C58AA0066C59C /* Games.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Games.m; sourceTree = "<group>"; };
 		18CFFBE31AD38C8D00961004 /* headImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = headImage.png; path = ../../SocialMediaApp/SocialMediaApp/headImage.png; sourceTree = "<group>"; };
 		18CFFBE51AD3AAF200961004 /* CardsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardsTableViewController.h; sourceTree = "<group>"; };
 		18CFFBE61AD3AAF200961004 /* CardsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardsTableViewController.m; sourceTree = "<group>"; };
@@ -141,6 +172,8 @@
 		18CFFC121AE2253800961004 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "../../parse-library-1.6.5/ParseUI.framework"; sourceTree = "<group>"; };
 		18CFFC251AE83AA400961004 /* CreateGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateGameViewController.h; path = ../CreateGameViewController.h; sourceTree = "<group>"; };
 		18CFFC261AE83AA400961004 /* CreateGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateGameViewController.m; path = ../CreateGameViewController.m; sourceTree = "<group>"; };
+		25697FED6392653E5342E0F4 /* Pods-TruLi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TruLi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TruLi/Pods-TruLi.debug.xcconfig"; sourceTree = "<group>"; };
+		31B45D3A9B4080C9EDB3C325 /* Pods-TruLi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TruLi.release.xcconfig"; path = "Pods/Target Support Files/Pods-TruLi/Pods-TruLi.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +181,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				184867B01B5C83870036CA56 /* Accounts.framework in Frameworks */,
+				184867AE1B5C834E0036CA56 /* Social.framework in Frameworks */,
 				18CFFC131AE2253800961004 /* ParseUI.framework in Frameworks */,
 				180756EC1AC9280400FB2B3B /* AudioToolbox.framework in Frameworks */,
 				180756EA1AC927E900FB2B3B /* CFNetwork.framework in Frameworks */,
@@ -183,6 +218,7 @@
 				180755411AC9224400FB2B3B /* Images */,
 				180755341AC91FD400FB2B3B /* TruLiTests */,
 				180755161AC91FD400FB2B3B /* Products */,
+				64BDD9E4B7249DF41D88E9CE /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -198,32 +234,11 @@
 		180755171AC91FD400FB2B3B /* TruLi */ = {
 			isa = PBXGroup;
 			children = (
+				1874A7EF1B4A30A4008C899E /* Controllers */,
+				1888CE6C1B0C517B0066C59C /* Views */,
+				1888CE6B1B0C513D0066C59C /* Model */,
 				1807551C1AC91FD400FB2B3B /* AppDelegate.h */,
 				1807551D1AC91FD400FB2B3B /* AppDelegate.m */,
-				18CFFC0B1AE078F400961004 /* FindFreindsTableViewCell.h */,
-				18CFFC0C1AE078F400961004 /* FindFreindsTableViewCell.m */,
-				18CFFBE81AD3B0F800961004 /* AddCardViewController.h */,
-				18CFFBE91AD3B0F800961004 /* AddCardViewController.m */,
-				18CFFBE51AD3AAF200961004 /* CardsTableViewController.h */,
-				18CFFBE61AD3AAF200961004 /* CardsTableViewController.m */,
-				180756FC1ACA6E9B00FB2B3B /* FriendsViewController.h */,
-				180756FD1ACA6E9B00FB2B3B /* FriendsViewController.m */,
-				180756FF1ACA6FA900FB2B3B /* EditFriendsTableViewController.h */,
-				180757001ACA6FA900FB2B3B /* EditFriendsTableViewController.m */,
-				18CFFC251AE83AA400961004 /* CreateGameViewController.h */,
-				18CFFC261AE83AA400961004 /* CreateGameViewController.m */,
-				180757021ACB3CAE00FB2B3B /* ProfileViewController.h */,
-				180757031ACB3CAE00FB2B3B /* ProfileViewController.m */,
-				1888CE651AFD29540066C59C /* AddBioViewController.h */,
-				1888CE661AFD29540066C59C /* AddBioViewController.m */,
-				180756F01AC9EFC500FB2B3B /* SignupViewController.h */,
-				180756F11AC9EFC500FB2B3B /* SignupViewController.m */,
-				180756ED1AC92B6100FB2B3B /* LoginViewController.h */,
-				180756EE1AC92B6100FB2B3B /* LoginViewController.m */,
-				1807551F1AC91FD400FB2B3B /* LobbyViewController.h */,
-				180755201AC91FD400FB2B3B /* LobbyViewController.m */,
-				180756F91AC9FA6500FB2B3B /* TabViewController.h */,
-				180756FA1AC9FA6500FB2B3B /* TabViewController.m */,
 				1888CE681AFD61430066C59C /* Main.storyboard */,
 				180755281AC91FD400FB2B3B /* Images.xcassets */,
 				1807552A1AC91FD400FB2B3B /* LaunchScreen.xib */,
@@ -289,6 +304,8 @@
 		180756D21AC9271300FB2B3B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				184867AF1B5C83870036CA56 /* Accounts.framework */,
+				184867AD1B5C834E0036CA56 /* Social.framework */,
 				18CFFC121AE2253800961004 /* ParseUI.framework */,
 				180756EB1AC9280400FB2B3B /* AudioToolbox.framework */,
 				180756E91AC927E900FB2B3B /* CFNetwork.framework */,
@@ -307,6 +324,87 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1874A7EE1B4A3088008C899E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				18CFFC0B1AE078F400961004 /* FindFreindsTableViewCell.h */,
+				18CFFC0C1AE078F400961004 /* FindFreindsTableViewCell.m */,
+				184867741B5470BE0036CA56 /* InviteTableViewCell.h */,
+				184867751B5470BE0036CA56 /* InviteTableViewCell.m */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		1874A7EF1B4A30A4008C899E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1874A7EE1B4A3088008C899E /* Cells */,
+				18CFFBE81AD3B0F800961004 /* AddCardViewController.h */,
+				18CFFBE91AD3B0F800961004 /* AddCardViewController.m */,
+				18CFFBE51AD3AAF200961004 /* CardsTableViewController.h */,
+				18CFFBE61AD3AAF200961004 /* CardsTableViewController.m */,
+				180756FC1ACA6E9B00FB2B3B /* FriendsViewController.h */,
+				180756FD1ACA6E9B00FB2B3B /* FriendsViewController.m */,
+				180756FF1ACA6FA900FB2B3B /* EditFriendsTableViewController.h */,
+				180757001ACA6FA900FB2B3B /* EditFriendsTableViewController.m */,
+				18CFFC251AE83AA400961004 /* CreateGameViewController.h */,
+				18CFFC261AE83AA400961004 /* CreateGameViewController.m */,
+				180757021ACB3CAE00FB2B3B /* ProfileViewController.h */,
+				180757031ACB3CAE00FB2B3B /* ProfileViewController.m */,
+				1888CE651AFD29540066C59C /* AddBioViewController.h */,
+				1888CE661AFD29540066C59C /* AddBioViewController.m */,
+				180756F01AC9EFC500FB2B3B /* SignupViewController.h */,
+				180756F11AC9EFC500FB2B3B /* SignupViewController.m */,
+				180756ED1AC92B6100FB2B3B /* LoginViewController.h */,
+				180756EE1AC92B6100FB2B3B /* LoginViewController.m */,
+				1807551F1AC91FD400FB2B3B /* LobbyViewController.h */,
+				180755201AC91FD400FB2B3B /* LobbyViewController.m */,
+				180756F91AC9FA6500FB2B3B /* TabViewController.h */,
+				180756FA1AC9FA6500FB2B3B /* TabViewController.m */,
+				1874A7F01B4A3451008C899E /* GameViewController.h */,
+				1874A7F11B4A3451008C899E /* GameViewController.m */,
+				1874A7F31B4F3D4A008C899E /* InvitesTableViewController.h */,
+				1874A7F41B4F3D4A008C899E /* InvitesTableViewController.m */,
+				184867711B546F140036CA56 /* GamesLobbyTableViewController.h */,
+				184867721B546F140036CA56 /* GamesLobbyTableViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		1888CE6B1B0C513D0066C59C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1888CE701B0C56050066C59C /* ProfilePicture.h */,
+				1888CE711B0C56050066C59C /* ProfilePicture.m */,
+				1888CE731B0C57930066C59C /* userAboutMe.h */,
+				1888CE741B0C57930066C59C /* userAboutMe.m */,
+				1888CE761B0C58AA0066C59C /* Games.h */,
+				1888CE771B0C58AA0066C59C /* Games.m */,
+				1888CE6D1B0C52990066C59C /* UserCard.h */,
+				1888CE6E1B0C52990066C59C /* UserCard.m */,
+				1874A7521B253855008C899E /* Invite.h */,
+				1874A7531B253855008C899E /* Invite.m */,
+			);
+			name = Model;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		1888CE6C1B0C517B0066C59C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		64BDD9E4B7249DF41D88E9CE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				25697FED6392653E5342E0F4 /* Pods-TruLi.debug.xcconfig */,
+				31B45D3A9B4080C9EDB3C325 /* Pods-TruLi.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -314,9 +412,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1807553B1AC91FD400FB2B3B /* Build configuration list for PBXNativeTarget "TruLi" */;
 			buildPhases = (
+				2C8E5A1B6F0ECA733062E8F9 /* Check Pods Manifest.lock */,
 				180755111AC91FD300FB2B3B /* Sources */,
 				180755121AC91FD300FB2B3B /* Frameworks */,
 				180755131AC91FD300FB2B3B /* Resources */,
+				048C0203FAD8B91FEC749D6E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -422,24 +522,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		048C0203FAD8B91FEC749D6E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TruLi/Pods-TruLi-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2C8E5A1B6F0ECA733062E8F9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		180755111AC91FD300FB2B3B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1874A7F21B4A3451008C899E /* GameViewController.m in Sources */,
+				1874A7541B253855008C899E /* Invite.m in Sources */,
 				18CFFC0D1AE078F400961004 /* FindFreindsTableViewCell.m in Sources */,
 				18CFFC271AE83AA400961004 /* CreateGameViewController.m in Sources */,
 				180756F21AC9EFC500FB2B3B /* SignupViewController.m in Sources */,
+				1888CE781B0C58AA0066C59C /* Games.m in Sources */,
 				18CFFBE71AD3AAF200961004 /* CardsTableViewController.m in Sources */,
 				180757011ACA6FA900FB2B3B /* EditFriendsTableViewController.m in Sources */,
 				1807551E1AC91FD400FB2B3B /* AppDelegate.m in Sources */,
+				184867761B5470BE0036CA56 /* InviteTableViewCell.m in Sources */,
+				1874A7F51B4F3D4A008C899E /* InvitesTableViewController.m in Sources */,
+				184867731B546F140036CA56 /* GamesLobbyTableViewController.m in Sources */,
 				18CFFBEA1AD3B0F800961004 /* AddCardViewController.m in Sources */,
 				180757041ACB3CAE00FB2B3B /* ProfileViewController.m in Sources */,
+				1888CE721B0C56050066C59C /* ProfilePicture.m in Sources */,
 				180755211AC91FD400FB2B3B /* LobbyViewController.m in Sources */,
+				1888CE751B0C57930066C59C /* userAboutMe.m in Sources */,
 				1888CE671AFD29540066C59C /* AddBioViewController.m in Sources */,
 				180756FE1ACA6E9B00FB2B3B /* FriendsViewController.m in Sources */,
 				1807551B1AC91FD400FB2B3B /* main.m in Sources */,
 				180756FB1AC9FA6500FB2B3B /* TabViewController.m in Sources */,
+				1888CE6F1B0C52990066C59C /* UserCard.m in Sources */,
 				180756EF1AC92B6100FB2B3B /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -560,6 +702,7 @@
 		};
 		1807553C1AC91FD400FB2B3B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25697FED6392653E5342E0F4 /* Pods-TruLi.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -570,12 +713,17 @@
 				);
 				INFOPLIST_FILE = TruLi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		1807553D1AC91FD400FB2B3B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31B45D3A9B4080C9EDB3C325 /* Pods-TruLi.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -586,6 +734,10 @@
 				);
 				INFOPLIST_FILE = TruLi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

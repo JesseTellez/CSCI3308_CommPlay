@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>9B5499DE-759A-485E-97E0-F9C30098BF36</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TruLi</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>EDC17EDC17D0AF8615915E22D909CE2DE91C0BBE</key>
+		<string>https://github.com/JesseTellez/CSCI3308_CommPlay.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TruLi.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>EDC17EDC17D0AF8615915E22D909CE2DE91C0BBE</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/JesseTellez/CSCI3308_CommPlay.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>EDC17EDC17D0AF8615915E22D909CE2DE91C0BBE</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EDC17EDC17D0AF8615915E22D909CE2DE91C0BBE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TruLi</string>
+		</dict>
+	</array>
+</dict>
+</plist>
